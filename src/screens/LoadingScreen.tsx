@@ -2,6 +2,7 @@ import { getAuth } from 'firebase/auth';
 import React, { useEffect } from 'react';
 import { ActivityIndicator, StyleSheet, View } from 'react-native';
 import {app, db} from "../firebase/firebase";
+import {styles} from "../style/styles";
 
 interface LoadingScreenProps {
     navigation: any,
@@ -24,11 +25,3 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({navigation}) => {
         </View>
     );
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        textAlign: "center", 
-    }
-})

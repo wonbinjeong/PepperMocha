@@ -3,12 +3,13 @@ import { View, Text, StyleSheet, Alert} from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import { getLoggedInUserInfo } from '../firebase/users';
 import {loggingOut} from '../firebase/auth';
+import {styles} from "../style/styles";
 
 interface DashboardScreenProps {
     navigation: any,
 };
 
-export const Dashboard: React.FC<DashboardScreenProps> = ({ navigation }) => {
+export const DashboardScreen: React.FC<DashboardScreenProps> = ({ navigation }) => {
   const [firstName, setFirstName] = useState('');
 
   useEffect(() => {
@@ -39,10 +40,3 @@ export const Dashboard: React.FC<DashboardScreenProps> = ({ navigation }) => {
     </View>
   )
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 5,
-  }
-})

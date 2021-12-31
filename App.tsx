@@ -2,10 +2,11 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {WelcomeScreen} from './src/screens/WelcomeScreen';
-import {SignUp} from './src/screens/SignUp';
-import {SignIn} from './src/screens/SignIn';
+import {SignUpScreen} from './src/screens/SignUpScreen';
+import {CreateFamilyScreen} from './src/screens/CreateFamilyScreen';
+import {SignInScreen} from './src/screens/SignInScreen';
 import {LoadingScreen} from './src/screens/LoadingScreen';
-import {Dashboard} from './src/screens/Dashboard';
+import {DashboardScreen} from './src/screens/DashboardScreen';
 
 const Stack = createStackNavigator();
 
@@ -15,9 +16,10 @@ export default function App() {
       <Stack.Navigator>
         <Stack.Screen name='Loading' component={LoadingScreen} options={{ headerShown: false }}/>
         <Stack.Screen name='Home' component={WelcomeScreen} options={{ headerShown: false }}/>
-        <Stack.Screen name='Sign Up' component={SignUp} options={{ headerShown: false }}/>
-        <Stack.Screen name='Sign In' component={SignIn} options={{ headerShown: false }}/>
-        <Stack.Screen name='Dashboard' component={Dashboard} options={{ headerShown: false }} /> 
+        <Stack.Screen name='SignUp' component={SignUpScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name="CreateFamily" component={CreateFamilyScreen} options={{headerShown: false}} />
+        <Stack.Screen name='SignIn' component={SignInScreen} options={{ headerShown: false }}/>
+        <Stack.Screen name='Dashboard' component={DashboardScreen} options={{ headerShown: false }} /> 
       </Stack.Navigator>
     </NavigationContainer>
   );

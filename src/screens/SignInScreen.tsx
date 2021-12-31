@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, Alert } from 'react-native';
 import { TouchableOpacity } from 'react-native-gesture-handler';
 import {signIn} from '../firebase/auth';
+import {styles} from "../style/styles";
 
 interface SignInScreenProps {
     navigation: any,
 }
 
-export const SignIn: React.FC<SignInScreenProps> = ({navigation}) => {
+export const SignInScreen: React.FC<SignInScreenProps> = ({navigation}) => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
@@ -50,12 +51,3 @@ export const SignIn: React.FC<SignInScreenProps> = ({navigation}) => {
         </View>
     )
 }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: "center",
-        textAlign: "center",
-    },
-
-})
